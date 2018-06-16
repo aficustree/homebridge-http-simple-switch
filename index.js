@@ -44,7 +44,8 @@ SimpleHttpSwitch.prototype = {
 
 		var res = request(this.http_method, this.url, {});
 		if(res.statusCode > 400){
-			this.log('HTTP power function failed');
+            error = 'HTTP power function failed'
+			this.log(error);
 			callback(error);
 		}else{
 			this.log('HTTP power function succeeded!');
